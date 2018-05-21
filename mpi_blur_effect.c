@@ -1,106 +1,133 @@
-//mpic++ -ggdb `pkg-config --cflags opencv` -o `basename blur-openmp.c .c` blur-openmp.c `pkg-config --libs opencv` -lm -l pthread -fopenmp
-//time mpirun -np 1 ./blur-openmp 4k.jpg miImagen_blur.jpg 15 16
 
-#include <stdio.h>
-#include <highgui.h>
-#include <stdlib.h>
-#include <cv.h>
-#include <opencv2/highgui/highgui.hpp>
-#include <omp.h>
 #include <mpi.h>
-
+#include <stdio.h>
+#include <cv.h>
+#include <highgui.h>
+//compila con "make"
+//corre con "mpirun -np 4 mpi_blur_effect 720p.jpg 15"
 using namespace cv;
-using namespace std;
 
-IplImage* original = 0;
-IplImage* distorsion = 0;
-double kernel;
-uchar* data;
-int n_threads, id;
+int main(int argc, char** argv) {
+   IplImage* img = 0; 
+  int height,width,step,channels;
 
-void blur(int tid, int numprocs){
-    int cols, rows, r, g, b, sum, x, y;
-    int init,ending;
-    tid = omp_get_thread_num();
-    init = tid*(original->width/numprocs);
-	ending = (tid+1)*original->width/numprocs;
-	for(rows = init; rows < ending; rows++){
-		for(cols = 0; cols < original->height; cols++){
-			  r = g = b = sum = 0;
-				for(x = rows; x < original->width && x < rows + kernel; x++){
-				    for(y = cols; y < original->height && y < cols + kernel; y++){
-							b += data[x*3 + y*original->width*3 + 0];
-							g += data[x*3 + y*original->width*3 + 1];
-							r += data[x*3 + y*original->width*3 + 2];
-							sum++;
-						}
-			 	}
-				b = b / sum;
-				g = g / sum;
-				r = r / sum;
-				data[rows*3 + cols*original->width*3 + 0] = b;
-				data[rows*3 + cols*original->width*3 + 1] = g;
-				data[rows*3 + cols*original->width*3 + 2] = r;
-		}
+double  delta;
+  int x,xx,y,yy,i,pR,pG,pB,R,G,B,kernel;
+
+  if(argc<3){
+    printf("Faltan argumentos: imagen.jgp kernel\n\7");
+    exit(0);
+  }
+  // cargar la imagen
+  img=cvLoadImage(argv[1]);
+  kernel = strtol(argv[2], NULL, 10);
+  if(!img){
+    printf("No se pudo cargar el archivo de imagen: %s\n",argv[1]);
+    exit(0);
+  }
+
+  // obtener los datos de la imagen
+  height    = img->height;
+  width     = img->width;
+  step      = img->widthStep;
+  channels  = img->nChannels;
+  unsigned char *data =(unsigned char *)img->imageData;
+
+  MPI_Init(NULL, NULL);
+
+  int world_size;
+  MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+
+  int world_rank;
+  MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+  unsigned char array[world_size];
+  
+  char processor_name[MPI_MAX_PROCESSOR_NAME];
+  int name_len;
+  MPI_Get_processor_name(processor_name, &name_len);
+
+ 
+  printf("Hello world from processor %s, rank %d out of %d processors\n",
+         processor_name, world_rank, world_size);
+
+int NUM_THREADS = world_size;
+int tid = world_rank;
+	int lim1= tid*width/NUM_THREADS;
+	int lim2= (tid+1)*width/NUM_THREADS;
+
+	for(xx = 0 + lim1; xx < lim2; xx++)
+	{
+    		for(yy = 0; yy < height; yy++)
+		{
+        		pB = pG = pR = 0;
+        		i = 0;
+        		for(x = xx; x < width && x < xx + kernel; x++)
+			{
+          			 for(y = yy; y < height && y < yy + kernel; y++)
+				{
+               			 pR += data[x*3 + y*width*3 + 2];
+               			 pG += data[x*3 + y*width*3 + 1];
+               			 pB += data[x*3 + y*width*3 + 0];
+                		i++;
+            			}
+      		        }
+       		        pR = pR/i;
+               		pG = pG/i;
+       		        pB = pB/i;
+            if(world_rank != 0){
+            MPI_Send(&pR, 1, MPI_INT, 0, xx*3 + yy*width*3 + 2, MPI_COMM_WORLD);
+            MPI_Send(&pG, 1, MPI_INT, 0, xx*3 + yy*width*3 + 1, MPI_COMM_WORLD);
+            MPI_Send(&pB, 1, MPI_INT, 0, xx*3 + yy*width*3 + 0, MPI_COMM_WORLD);
+            }
+        		data[xx*3 + yy*width*3 + 2] = pR;
+        		data[xx*3 + yy*width*3 + 1] = pG;
+       		  data[xx*3 + yy*width*3 + 0] = pB;
+    		}
 	}
+
+if(world_rank==0){
+   int n;
+  for(n=1;n<world_size;n++){
+   NUM_THREADS = world_size;
+   tid = n;
+   printf("Process  %d data \n",n);
+   lim1= tid*width/NUM_THREADS;
+   lim2= (tid+1)*width/NUM_THREADS;
+  for(xx = 0 + lim1; xx < lim2; xx++)
+  {
+        for(yy = 0; yy < height; yy++)
+    {       
+            MPI_Recv(&pR, 1, MPI_INT, n, xx*3 + yy*width*3 + 2, MPI_COMM_WORLD,MPI_STATUS_IGNORE);
+            MPI_Recv(&pG, 1, MPI_INT, n, xx*3 + yy*width*3 + 1, MPI_COMM_WORLD,MPI_STATUS_IGNORE);
+            MPI_Recv(&pB, 1, MPI_INT, n, xx*3 + yy*width*3 + 0, MPI_COMM_WORLD,MPI_STATUS_IGNORE);
+            data[xx*3 + yy*width*3 + 2] = pR;
+            data[xx*3 + yy*width*3 + 1] = pG;
+            data[xx*3 + yy*width*3 + 0] = pB;
+            
+        }
+  }
+}
 }
 
-
-int main(int argc, char *argv[]){
-	
-	int done, processId, numprocs, I, rc, i;
-	done = 0;
-
-	if(argc < 4){
-		printf("Faltan argumentos para poder ejecutar el programa \n");
-		return -1;
-	}
-
-	//abrir la imagen, junto con restriccion
-	original = cvLoadImage(argv[1], CV_LOAD_IMAGE_COLOR);
-    if(!original){
-		printf("No se pudo abrir el archivo %s \n", argv[1]);
-		return -1;
-	}
-
-	MPI_Init(&argc, &argv);
-        MPI_Comm_size(MPI_COMM_WORLD, &numprocs);
-        MPI_Comm_rank(MPI_COMM_WORLD, &processId);
-	if (processId =! 0) printf("\nLaunching with %i processes", numprocs);
-
-	//inicializando un segundo objeto IplImage para la imagen distorsionada
-	distorsion = cvCreateImage(cvSize(original->width,original->height), original->depth, original->nChannels);
-	//generando copia de datos
-	distorsion->imageData = original->imageData;
-	data = (uchar *)distorsion->imageData;
-
-	//cast de char a double
-	kernel = atof(argv[3]);
-	n_threads = atoi(argv[4]);
-
-	#pragma omp parallel num_threads(n_threads)
-	{
-	  int threadId = omp_get_thread_num();
-	  int threadsTotal = omp_get_num_threads();
-	  printf("%d",threadsTotal);
-	  int globalId = (processId * threadsTotal) + threadId;
-	  blur(globalId, threadsTotal*numprocs);
-	}
-
-	//cvNamedWindow("Imagen distorsionada", CV_WINDOW_NORMAL);
-	//cvMoveWindow("Imagen distorsionada", 200, 100);
-	// mostrar imagen
-	//cvShowImage("Imagen distorsionada", distorsion );
-	/*Mat nuevo = cvarrToMat(distorsion);
-	string nombre;
-	nombre = "bluropenmpi-";
-	nombre += argv[1];
-	imwrite(nombre,nuevo);
-	// esperar por llave
-	cvWaitKey(0);
-	// release de imagen
-	cvReleaseImage(&distorsion );*/
-
-  return 0;
+  
+/*
+ // crear ventana 	
+  cvNamedWindow("Imagen editada", CV_WINDOW_NORMAL); 
+  cvMoveWindow("Imagen editada", 100, 100);
+  // mostrar imagen
+  cvShowImage("Imagen editada", img );
+   //esperar por llave
+  cvWaitKey(0);
+  // release de imagen
+  */ 
+ if (world_rank == 0){
+  char str[16]="blur-sec-";
+  char *str1=argv[1];
+  Mat m = cvarrToMat(img);
+  imwrite(strcat(str,str1), m);
+}
+  cvReleaseImage(&img);
+  cvReleaseImage(&img );
+  
   MPI_Finalize();
 }
