@@ -2,7 +2,7 @@
 
 for kernel in 3 5 7 9 11 13 15
 do
-    for n_threads in 1 2 4 8
+    for n_threads in 1 2 4 6 8
     do
         echo "------------------------------------------" >> mediciones_openmpi.txt
         echo "Imagen en 1080" >> mediciones_openmpi.txt
