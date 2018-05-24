@@ -120,6 +120,7 @@ if(world_rank==0){
   cvWaitKey(0);
   // release de imagen
   */ 
+/*	
  if (world_rank == 0){
   char str[16]="blur-sec-";
   char *str1=argv[1];
@@ -127,7 +128,7 @@ if(world_rank==0){
   imwrite(strcat(str,str1), m);
 }
   cvReleaseImage(&img);
-  cvReleaseImage(&img );
+  cvReleaseImage(&img );*/
   
   MPI_Finalize();
 }
