@@ -733,3 +733,636 @@ Usando un kernel de  15 y 8 hilos
 real	0m1.653s
 user	0m2.015s
 sys	0m2.773s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  3 y 1 hilos
+
+real	0m0.506s
+user	0m0.245s
+sys	0m0.041s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  3 y 1 hilos
+
+real	0m0.383s
+user	0m0.128s
+sys	0m0.041s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  3 y 1 hilos
+
+real	0m0.330s
+user	0m0.080s
+sys	0m0.032s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  3 y 2 hilos
+
+real	0m0.794s
+user	0m0.994s
+sys	0m0.058s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  3 y 2 hilos
+
+real	0m0.502s
+user	0m0.462s
+sys	0m0.081s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  3 y 2 hilos
+
+real	0m0.376s
+user	0m0.229s
+sys	0m0.054s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  3 y 4 hilos
+
+real	0m8.817s
+user	0m5.981s
+sys	0m9.239s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  3 y 4 hilos
+
+real	0m3.689s
+user	0m2.302s
+sys	0m3.576s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  3 y 4 hilos
+
+real	0m1.554s
+user	0m0.731s
+sys	0m1.191s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  3 y 6 hilos
+
+real	0m8.856s
+user	0m7.985s
+sys	0m14.702s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  3 y 6 hilos
+
+real	0m2.393s
+user	0m2.396s
+sys	0m2.796s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  3 y 6 hilos
+
+real	0m0.996s
+user	0m0.947s
+sys	0m0.878s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  3 y 8 hilos
+
+real	0m5.716s
+user	0m7.806s
+sys	0m8.594s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  3 y 8 hilos
+
+real	0m3.205s
+user	0m3.439s
+sys	0m4.448s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  3 y 8 hilos
+
+real	0m1.147s
+user	0m1.334s
+sys	0m1.306s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  5 y 1 hilos
+
+real	0m0.730s
+user	0m0.478s
+sys	0m0.035s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  5 y 1 hilos
+
+real	0m0.502s
+user	0m0.231s
+sys	0m0.051s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  5 y 1 hilos
+
+real	0m0.382s
+user	0m0.131s
+sys	0m0.030s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  5 y 2 hilos
+
+real	0m0.992s
+user	0m1.482s
+sys	0m0.033s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  5 y 2 hilos
+
+real	0m0.647s
+user	0m0.718s
+sys	0m0.026s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  5 y 2 hilos
+
+real	0m0.452s
+user	0m0.306s
+sys	0m0.057s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  5 y 4 hilos
+
+real	0m8.853s
+user	0m4.409s
+sys	0m6.701s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  5 y 4 hilos
+
+real	0m3.870s
+user	0m1.845s
+sys	0m3.020s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  5 y 4 hilos
+
+real	0m1.611s
+user	0m0.823s
+sys	0m1.104s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  5 y 6 hilos
+
+real	0m4.740s
+user	0m5.420s
+sys	0m5.295s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  5 y 6 hilos
+
+real	0m3.866s
+user	0m3.017s
+sys	0m5.322s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  5 y 6 hilos
+
+real	0m1.105s
+user	0m0.967s
+sys	0m1.102s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  5 y 8 hilos
+
+real	0m5.375s
+user	0m7.619s
+sys	0m7.505s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  5 y 8 hilos
+
+real	0m3.232s
+user	0m3.594s
+sys	0m5.996s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  5 y 8 hilos
+
+real	0m1.274s
+user	0m1.330s
+sys	0m1.957s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  7 y 1 hilos
+
+real	0m1.075s
+user	0m0.822s
+sys	0m0.031s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  7 y 1 hilos
+
+real	0m0.673s
+user	0m0.421s
+sys	0m0.031s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  7 y 1 hilos
+
+real	0m0.461s
+user	0m0.176s
+sys	0m0.031s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  7 y 2 hilos
+
+real	0m1.397s
+user	0m2.188s
+sys	0m0.063s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  7 y 2 hilos
+
+real	0m0.758s
+user	0m0.996s
+sys	0m0.056s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  7 y 2 hilos
+
+real	0m0.472s
+user	0m0.396s
+sys	0m0.071s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  7 y 4 hilos
+
+real	0m9.137s
+user	0m5.149s
+sys	0m7.449s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  7 y 4 hilos
+
+real	0m3.560s
+user	0m1.810s
+sys	0m2.810s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  7 y 4 hilos
+
+real	0m1.742s
+user	0m1.093s
+sys	0m1.518s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  7 y 6 hilos
+
+real	0m8.430s
+user	0m7.076s
+sys	0m10.697s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  7 y 6 hilos
+
+real	0m3.895s
+user	0m3.386s
+sys	0m4.928s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  7 y 6 hilos
+
+real	0m1.650s
+user	0m1.093s
+sys	0m2.027s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  7 y 8 hilos
+
+real	0m5.483s
+user	0m7.978s
+sys	0m7.939s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  7 y 8 hilos
+
+real	0m3.325s
+user	0m3.743s
+sys	0m4.685s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  7 y 8 hilos
+
+real	0m1.140s
+user	0m1.454s
+sys	0m1.364s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  9 y 1 hilos
+
+real	0m1.516s
+user	0m1.274s
+sys	0m0.025s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  9 y 1 hilos
+
+real	0m0.905s
+user	0m0.661s
+sys	0m0.026s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  9 y 1 hilos
+
+real	0m0.496s
+user	0m0.244s
+sys	0m0.035s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  9 y 2 hilos
+
+real	0m1.905s
+user	0m3.279s
+sys	0m0.066s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  9 y 2 hilos
+
+real	0m0.990s
+user	0m1.479s
+sys	0m0.045s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  9 y 2 hilos
+
+real	0m0.548s
+user	0m0.601s
+sys	0m0.036s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  9 y 4 hilos
+
+real	0m9.165s
+user	0m4.520s
+sys	0m6.743s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  9 y 4 hilos
+
+real	0m3.763s
+user	0m2.252s
+sys	0m2.592s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  9 y 4 hilos
+
+real	0m1.720s
+user	0m0.975s
+sys	0m1.242s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  9 y 6 hilos
+
+real	0m7.808s
+user	0m7.459s
+sys	0m9.696s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  9 y 6 hilos
+
+real	0m3.962s
+user	0m3.734s
+sys	0m5.488s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  9 y 6 hilos
+
+real	0m1.486s
+user	0m1.405s
+sys	0m1.527s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  9 y 8 hilos
+
+real	0m5.666s
+user	0m8.403s
+sys	0m7.822s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  9 y 8 hilos
+
+real	0m2.610s
+user	0m3.633s
+sys	0m3.349s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  9 y 8 hilos
+
+real	0m1.496s
+user	0m1.398s
+sys	0m2.503s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  11 y 1 hilos
+
+real	0m2.263s
+user	0m1.998s
+sys	0m0.052s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  11 y 1 hilos
+
+real	0m1.100s
+user	0m0.842s
+sys	0m0.040s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  11 y 1 hilos
+
+real	0m0.605s
+user	0m0.356s
+sys	0m0.032s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  11 y 2 hilos
+
+real	0m2.440s
+user	0m4.276s
+sys	0m0.069s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  11 y 2 hilos
+
+real	0m1.268s
+user	0m1.935s
+sys	0m0.050s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  11 y 2 hilos
+
+real	0m0.684s
+user	0m0.779s
+sys	0m0.044s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  11 y 4 hilos
+
+real	0m10.087s
+user	0m5.850s
+sys	0m7.065s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  11 y 4 hilos
+
+real	0m4.629s
+user	0m2.786s
+sys	0m3.271s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  11 y 4 hilos
+
+real	0m1.579s
+user	0m1.130s
+sys	0m1.392s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  11 y 6 hilos
+
+real	0m9.142s
+user	0m8.475s
+sys	0m13.843s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  11 y 6 hilos
+
+real	0m4.183s
+user	0m4.488s
+sys	0m5.819s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  11 y 6 hilos
+
+real	0m1.756s
+user	0m1.487s
+sys	0m2.419s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  11 y 8 hilos
+
+real	0m5.720s
+user	0m8.549s
+sys	0m7.955s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  11 y 8 hilos
+
+real	0m3.312s
+user	0m4.372s
+sys	0m4.205s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  11 y 8 hilos
+
+real	0m1.581s
+user	0m1.490s
+sys	0m2.819s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  13 y 1 hilos
+
+real	0m2.759s
+user	0m2.524s
+sys	0m0.017s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  13 y 1 hilos
+
+real	0m1.499s
+user	0m1.221s
+sys	0m0.023s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  13 y 1 hilos
+
+real	0m0.709s
+user	0m0.482s
+sys	0m0.008s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  13 y 2 hilos
+
+real	0m3.129s
+user	0m5.726s
+sys	0m0.063s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  13 y 2 hilos
+
+real	0m1.556s
+user	0m2.603s
+sys	0m0.039s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  13 y 2 hilos
+
+real	0m0.801s
+user	0m1.022s
+sys	0m0.047s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  13 y 4 hilos
+
+real	0m10.318s
+user	0m5.505s
+sys	0m7.188s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  13 y 4 hilos
+
+real	0m3.922s
+user	0m3.117s
+sys	0m3.795s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  13 y 4 hilos
+
+real	0m1.956s
+user	0m1.101s
+sys	0m1.209s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  13 y 6 hilos
+
+real	0m9.406s
+user	0m9.732s
+sys	0m13.599s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  13 y 6 hilos
+
+real	0m4.207s
+user	0m3.493s
+sys	0m4.770s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  13 y 6 hilos
+
+real	0m1.738s
+user	0m1.464s
+sys	0m1.984s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  13 y 8 hilos
+
+real	0m8.017s
+user	0m11.722s
+sys	0m14.283s
+------------------------------------------
+Imagen en 720
+Usando un kernel de  13 y 8 hilos
+
+real	0m2.778s
+user	0m4.271s
+sys	0m3.475s
+------------------------------------------
+Imagen en 480
+Usando un kernel de  13 y 8 hilos
+
+real	0m1.548s
+user	0m1.875s
+sys	0m2.477s
+------------------------------------------
+Imagen en 1080
+Usando un kernel de  15 y 1 hilos

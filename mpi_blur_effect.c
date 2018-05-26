@@ -9,11 +9,11 @@ using namespace cv;
 
 int main(int argc, char** argv) {
    IplImage* img = 0; 
-  int height,width,step,channels;
+  short int height,width,step,channels;
 
 double  delta;
   short int x,xx,y,yy,i;
-  int pR,pG,pB,R,G,B,kernel;
+  short int pR,pG,pB,R,G,B,kernel;
 
   if(argc<3){
     printf("Faltan argumentos: imagen.jgp kernel\n\7");
