@@ -36,15 +36,15 @@ int main(int argc, char** argv) {
 	
 	MPI_Init(NULL, NULL);
 
-	short int world_size;
+	int world_size;
 	MPI_Comm_size(MPI_COMM_WORLD, &world_size);
 
-	short int world_rank;
+	int world_rank;
 	MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
 	unsigned char array[world_size];
   
 	char processor_name[MPI_MAX_PROCESSOR_NAME];
-	short int name_len;
+	int name_len;
 	MPI_Get_processor_name(processor_name, &name_len);
 
  
