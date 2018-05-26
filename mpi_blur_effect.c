@@ -12,7 +12,8 @@ int main(int argc, char** argv) {
   int height,width,step,channels;
 
 double  delta;
-  int x,xx,y,yy,i,pR,pG,pB,R,G,B,kernel;
+  short int x,xx,y,yy,i;
+  int pR,pG,pB,R,G,B,kernel;
 
   if(argc<3){
     printf("Faltan argumentos: imagen.jgp kernel\n\7");
@@ -86,7 +87,7 @@ int tid = world_rank;
 	}
 
 if(world_rank==0){
-   int n;
+   short int n;
   for(n=1;n<world_size;n++){
    NUM_THREADS = world_size;
    tid = n;
